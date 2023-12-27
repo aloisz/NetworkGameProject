@@ -18,9 +18,6 @@ public class PlayerController : NetworkBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
-
-        GameObject camera = Instantiate(GameManager.instance.camera, transform.position, Quaternion.identity);
-        camera.GetComponent<CinemachineVirtualCamera>().Follow = transform;
     }
 
     void Update()
